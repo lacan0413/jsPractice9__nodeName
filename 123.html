@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>e.target & nodeName</title>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><a href="#" class="link">這是一個連結</a></li>
+        </ul>
+    </div>
+
+
+    <script>
+        var link = document.querySelector('.box');
+
+
+        var x = function (e) {
+            console.log(e);
+            console.log(e.target.nodeName);
+        }
+
+
+        link.addEventListener('click', x)
+
+
+
+
+
+        // [object PointerEvent] 
+        // {
+        //     "isTrusted": true
+        // }
+        // "DIV"
+
+
+
+        // [object PointerEvent]
+        // {
+        //     "isTrusted": true
+        // }
+        // "LI"
+
+
+
+        // [object PointerEvent]
+        // {
+        //     "isTrusted": true
+        // }
+        // "A"
+    </script>
+</body>
+
+</html>
